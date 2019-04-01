@@ -1,0 +1,26 @@
+﻿
+
+<br />
+<h1> Nueva Categoria </h1>
+
+
+<form action="/Categoria/Guardar" method="post">
+
+    <div>
+        <label>Nombre</label>
+        <input name="Nombre" value="@Model.Nombre" />
+        @Html.ValidationMessage("Nombre")
+    </div>
+    <br />
+
+    <div>
+        <label>Descripcion</label>
+        <input name="Descripcion" value="@Model.Descripcion" />
+        @Html.ValidationMessage("Descripcion")
+    </div>
+    <br />
+
+
+    <button> Guardar</button>
+
+</form>

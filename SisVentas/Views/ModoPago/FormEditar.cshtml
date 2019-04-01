@@ -1,0 +1,22 @@
+﻿
+<br />
+<h1> Editar</h1>
+
+
+<form action="/ModoPago/Actualizar?Id=@Model.Id" method="post">
+
+    <div>
+        <label>Nombre</label>
+        <input name="Nombre" value="@Model.Nombre" />
+    </div>
+    <br />
+
+    <div>
+        <label>Otros Detalles</label>
+        <input name="OtrosDetalles" value="@Model.OtrosDetalles" />
+    </div>
+    <br />
+
+    <button> Guardar</button>
+
+</form>

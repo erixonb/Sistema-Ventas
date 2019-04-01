@@ -1,0 +1,30 @@
+﻿
+<br />
+<h1> Nueva Factura </h1>
+
+
+<form action="/Factura/Guardar" method="post">
+
+    <div>
+        <label>Cliente</label>
+        @Html.DropDownList("IdCliente", new SelectList(ViewBag.Clientes,
+        "Id", "Nombre"), "Elegir Cliente", new { @class = "form-control" })
+    </div>
+    <br />
+
+    <div>
+        <label>Fecha</label>
+        <input name="Fecha" value="@Model.Fecha" />
+    </div>
+    <br />
+
+    <div>
+        <label>Modo Pago</label>
+        @Html.DropDownList("IdModoPago", new SelectList(ViewBag.ModoPagos,
+        "Id", "Nombre"), "Elegir Modo Pago", new { @class = "form-control" })
+    </div>
+    <br />
+
+    <button> Guardar</button>
+
+</form>

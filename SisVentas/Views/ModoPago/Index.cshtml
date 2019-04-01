@@ -1,0 +1,30 @@
+﻿
+<br />
+
+<a href="/ModoPago/formGuardar">Registar Modo Pago</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Otrso Detalles</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var modopago in Model)
+        {
+            <tr>
+                <td>@modopago.IdPago</td>
+                <td>@modopago.Nombre</td>
+                <td>@modopago.OtrosDetalles</td>
+                <td>
+                    <a href="/ModoPago/FormEditar?id=@modopago.IdPago">Editar</a>
+                    |
+                    <a href="/ModoPago/Eliminar?id=@modopago.IdPago">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

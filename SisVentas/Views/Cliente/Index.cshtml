@@ -1,0 +1,37 @@
+﻿
+<br />
+
+<a href="/Cliente/formGuardar">Registar Cliente</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Direccion</th>
+            <th>Fecha Nacimiento</th>
+            <th>Email</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var cliente in Model)
+        {
+            <tr>
+                <td>@cliente.Id</td>
+                <td>@cliente.Nombre</td>
+                <td>@cliente.Apellido</td>
+                <td>@cliente.Direccion</td>
+                <td>@cliente.FechaNac</td>
+                <td>@cliente.Email</td>
+                <td>
+                    <a href="/Cliente/FormEditar?id=@cliente.Id">Editar</a>
+                    |
+                    <a href="/Cliente/Eliminar?id=@cliente.Id">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

@@ -1,0 +1,39 @@
+﻿
+<br />
+
+<a href="/Categoria/Index">Ir a Categorias</a>
+
+<br />
+
+<a href="/Producto/formGuardar">Registar Producto</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Categoria</th>
+            <th>Stock</th>
+            <th>Precio</th>
+           
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var producto in Model)
+        {
+            <tr>
+                <td>@producto.Id</td>
+                <td>@producto.Nombre</td>
+                <td>@producto.Categorias.Nombre</td>
+                <td>@producto.Stock</td>
+                <td>@producto.Precio</td>
+                <td>
+                    <a href="/Producto/FormEditar?id=@producto.Id">Editar</a>
+                    |
+                    <a href="/Producto/Eliminar?id=@producto.Id">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

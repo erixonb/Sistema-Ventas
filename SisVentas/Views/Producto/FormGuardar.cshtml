@@ -1,0 +1,36 @@
+﻿
+<br />
+<h1> Nuevo Producto </h1>
+
+
+<form action="/Producto/Guardar" method="post">
+
+    <div>
+        <label>Nombre</label>
+        <input name="Nombre" value="@Model.Nombre" />
+        @Html.ValidationMessage("Nombre")
+    </div>
+    <br />
+
+    <div>
+        <label>Categoria</label>
+        @Html.DropDownList("IdCategoria", new SelectList(ViewBag.Categorias,
+        "Id", "Nombre"), "Elegir Categoria", new { @class = "form-control" })
+    </div>
+    <br />
+
+    <div>
+        <label>Stock</label>
+        <input name="Stock" value="@Model.Stock" />
+    </div>
+    <br />
+
+    <div>
+        <label>Precio</label>
+        <input name="Precio" value="@Model.Precio" />
+    </div>
+    <br />
+
+    <button> Guardar</button>
+
+</form>

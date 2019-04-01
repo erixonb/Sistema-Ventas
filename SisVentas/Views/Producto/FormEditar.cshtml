@@ -1,0 +1,33 @@
+﻿
+<br />
+<h1> Editar</h1>
+
+
+<form action="/Producto/Actualizar?Id=@Model.Id" method="post">
+    <div>
+        <label>Nombre</label>
+        <input name="Nombre" value="@Model.Nombre" />
+    </div>
+    <br />
+
+    <div>
+        <label>Categoria</label>
+        <input name="CategoriaId" value="@Model.CategoriaId" />
+    </div>
+    <br />
+
+    <div>
+        <label>Stock</label>
+        <input name="Stock" value="@Model.stock" />
+    </div>
+    <br />
+
+    <div>
+        <label>Precio</label>
+        <input name="Precio" value="@Model.Precio" />
+    </div>
+    <br />
+
+    <button> Guardar</button>
+
+</form>

@@ -1,0 +1,33 @@
+﻿
+<br />
+
+<a href="/Fcatura/formGuardar">Nueva Factura</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Cliente</th>
+            <th>Fecha</th>
+            <th>Modo Pago</th>
+           
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var factura in Model)
+        {
+            <tr>
+                <td>@factura.Id</td>
+                <td>@factura.Clientes.Nombre @factura.Clientes.Apellido</td>
+                <td>@factura.Fecha</td>
+                <td>@factura.ModoPagos.Nombre</td>
+                <td>
+                    <a href="/Factura/FormEditar?id=@factura.Id">Editar</a>
+                    |
+                    <a href="/Factura/Eliminar?id=@factura.Id">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

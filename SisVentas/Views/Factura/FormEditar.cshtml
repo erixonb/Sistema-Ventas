@@ -1,0 +1,27 @@
+﻿
+<br />
+<h1> Editar</h1>
+
+
+<form action="/Factura/Actualizar?Id=@Model.Id" method="post">
+    <div>
+        <label>Cliente</label>
+        <input name="IdCliente" value="@Model.IdCliente" />
+    </div>
+    <br />
+
+    <div>
+        <label>Fecha</label>
+        <input name="Fecha" value="@Model.Fecha" />
+    </div>
+    <br />
+
+    <div>
+        <label>Modo de Pago</label>
+        <input name="IdModoPago" value="@Model.IdModoPago" />
+    </div>
+    <br />
+
+    <button> Guardar</button>
+
+</form>

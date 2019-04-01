@@ -1,0 +1,42 @@
+﻿<br />
+<h1> Nuevo Cliente </h1>
+
+
+<form action="/Cliente/Guardar" method="post">
+
+    <div>
+        <label>Nombre</label>
+        <input name="Nombre" value="@Model.Nombre" />
+        @Html.ValidationMessage("Nombre")
+    </div>
+    <br />
+
+    <div>
+        <label>Apellido</label>
+        <input name="Apellido" value="@Model.Apellido" />
+        @Html.ValidationMessage("Apellido")
+    </div>
+    <br />
+
+    <div>
+        <label>Direccion</label>
+        <input name="Direccion" value="@Model.Direccion" />
+    </div>
+    <br />
+
+    <div>
+        <label>Fecha Nacimiento</label>
+        <input name="FechaNac" value="@Model.FechaNac" />
+    </div>
+    <br />
+
+
+    <div>
+        <label>Email</label>
+        <input name="Email" value="@Model.Email" />
+    </div>
+    <br />
+
+    <button> Guardar</button>
+
+</form>

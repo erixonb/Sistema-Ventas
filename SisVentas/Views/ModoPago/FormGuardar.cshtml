@@ -1,0 +1,26 @@
+﻿
+
+<br />
+<h1> Nuevo Modo Pago </h1>
+
+
+<form action="/ModoPago/Guardar" method="post">
+
+    <div>
+        <label>Nombre</label>
+        <input name="Nombre" value="@Model.Nombre" />
+        @Html.ValidationMessage("Nombre")
+    </div>
+    <br />
+
+    <div>
+        <label>Otros Detallesz</label>
+        <input name="OtrosDetalles" value="@Model.OtrosDetalles" />
+        @Html.ValidationMessage("OtrosDetalles")
+    </div>
+    <br />
+
+
+    <button> Guardar</button>
+
+</form>

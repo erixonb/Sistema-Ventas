@@ -1,0 +1,30 @@
+﻿
+<br />
+
+<a href="/Categoria/formGuardar">Registar Categoria</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Descripcion</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var categoria in Model)
+        {
+            <tr>
+                <td>@categoria.Id</td>
+                <td>@categoria.Nombre</td>
+                <td>@categoria.Descripcion</td>
+                <td>
+                    <a href="/Categoria/FormEditar?id=@categoria.Id">Editar</a>
+                    |
+                    <a href="/Categoria/Eliminar?id=@categoria.Id">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
